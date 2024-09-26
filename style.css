@@ -1,198 +1,383 @@
 .header {
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eceae5;
+}
+
+input {
+  font-size: x-large;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+
+.tab.active {
+  background-color: #b4f461;
+  color: #333;
+}
+
+.donation-card,
+.history-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  padding: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.295);
+}
+
+.donation-card img {
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.donation-content {
+  flex-grow: 1;
+}
+
+.donation-content h3 {
+  margin: 0 0 10px;
+}
+
+.donation-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.donation-amount {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #ffffff;
+}
+
+.donation-amount img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.donation-amount {
+  padding: 10px;
+  width: 100%;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+.donate-btn {
+  background-color: #b4f461;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: x-large;
+  text-align: center;
+}
+
+/* History section */
+.history-section {
+  display: none;
+}
+
+.history-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.history-card h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.history-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* From Uiverse.io by Creatlydev */
+.input {
+  max-width: 100%;
+  padding: 12px;
+  padding-inline: 10px;
+
+  border: 0.5px gray solid;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+  height: 40px;
+}
+
+input::placeholder {
+  color: dimgray;
+  font-size: x-large;
+  padding-inline: 10px;
+  padding-top: auto;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.confirm-donation {
+  background-color: #a5a5a533;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+
+.blog-button {
+  background-color: #b4f461;
+  border: none;
+  font-size: large;
+  padding: 20px 30px;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: larger;
+  color: #666;
+  transition: all 0.3s ease-in-out;
+}
+
+.donation-card img {
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.donation-content {
+  flex-grow: 1;
+}
+
+.donation-content h3 {
+  margin: 0 0 10px;
+}
+
+.donation-content p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.donation-amount {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #ffffff;
+}
+
+.donation-amount img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.donation-amount {
+  padding: 10px;
+  width: 100%;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+.donate-btn {
+  background-color: #b4f461;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: x-large;
+  text-align: center;
+}
+
+/* History section */
+.history-section {
+  display: none;
+}
+
+.history-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.history-card h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.history-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.confirm-donation {
+  background-color: #b4f461;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-donation:hover {
+  background-color: #9fe34a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px;
+    flex-direction: column;
     align-items: center;
-    background: #eceae5;
   }
-  
-  .blog-button {
-    background-color: #b4f461;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  
-  }
-  
+
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 10px;
+  }
+
+  
+
+  .donation-card, .history-card {
+    flex-direction: column;
+    text-align: center;
     padding: 20px;
   }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 10px;
-  }
-  
-  .tab {
-    padding: 15px 25px;
-    cursor: pointer;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: larger;
-    color: #666;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .tab.active {
-    background-color: #b4f461;
-    color: #333;
-    scale: 1.1;
-  }
-  
-  .donation-card,
-  .history-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    display: flex;
-    padding: 30px;
-    border: 1px solid rgba(128, 128, 128, 0.295);
-  }
-  
+
   .donation-card img {
-    border-radius: 10px;
-    margin-right: 20px;
-  }
-  
-  .donation-content {
-    flex-grow: 1;
-  }
-  
-  .donation-content h3 {
-    margin: 0 0 10px;
-  }
-  
-  .donation-content p {
-    margin: 10px 0;
-    color: #666;
-  }
-  
-  .donation-amount {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    background-color: #ffffff;
-  }
-  
-  .donation-amount img {
-    width: 20px;
-    margin-right: 5px;
-  }
-  
-  .donation-amount {
-    padding: 10px;
+    margin-bottom: 20px;
     width: 100%;
-    margin-right: 10px;
-    border: 1px solid #ddd;
+    height: auto;
   }
-  
-  .donate-btn {
-    background-color: #b4f461;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: x-large;
+
+  .donation-content {
     text-align: center;
   }
-  
-  /* History section */
-  .history-section {
-    display: none;
+
+  .modal-content {
+    width: 90%;
   }
-  
-  .history-card {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 10px;
-    gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    gap: 5px;
   }
-  
-  .history-card h4 {
-    margin: 0;
+
+  .tab {
+    padding: 10px;
+    font-size: medium;
+  }
+
+  .donate-btn {
+    padding: 10px;
+    font-size: large;
+  }
+
+  .donation-content h3 {
     font-size: 18px;
   }
-  
-  .history-card p {
-    margin: 5px 0 0;
+
+  .donation-content p {
     font-size: 14px;
-    color: #888;
   }
-  
-  /* From Uiverse.io by Creatlydev */
-  .input {
-    max-width: 100%;
-    padding: 12px;
-    padding-inline: 10px;
-  
-    border: 0.5px gray solid;
-    border-radius: 4px;
-    box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
-    outline: none;
-    color: dimgray;
-    height: 40px;
+
+  .history-card h4 {
+    font-size: 16px;
   }
-  
-  input::placeholder {
-    color: dimgray;
-    font-size: large;
-    padding-inline: 10px;
-    padding-top: auto;
+
+  .history-card p {
+    font-size: 12px;
   }
-  
-  /* Modal styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    position: relative;
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
-    
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .confirm-donation {
-    background-color: #a5a5a533;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+}
