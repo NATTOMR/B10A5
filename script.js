@@ -40,3 +40,22 @@ window.addEventListener('click', (event) => {
     modal.style.display = 'none';
   }
 });
+
+const total= document.getElementById('total');
+const donationArray = document.getElementsByClassName("donate-total");
+const inputs = document.getElementsByClassName("input")
+const donateButton = document.getElementsByClassName("donate-btn");
+for (let i = 0; i < inputs.length; i++) {
+  donateButton[i].addEventListener("click", () => {
+    const inputValue = +inputs[i].value;
+    const totalValue = +total.textContent;
+
+    if (inputValue > 0 ) { 
+      total.textContent = totalValue - inputValue;
+      const donation = + donationArray[i].textContent
+      const totalDonation = donation + inputValue;
+      donationArray[i].textContent = totalDonation
+    }
+  });
+}
+
